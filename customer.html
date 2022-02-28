@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset = "utf-8">
+  <!--<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>-->
+  <title>MINI-PROJECT</title>
+
+  
+  <link  rel="stylesheet" href = "{{ url_for('static',filename = 'materialize.css')}}" type="text/css">
+ 
+</head>
+
+<body>
+  <nav class="light-blue lighten-1" role="navigation">
+    
+      <ul class="right hide-on-med-and-down">
+       
+      </ul>
+
+      <ul id="nav-mobile" class="sidenav">
+       
+      </ul>
+      
+    </div>
+  </nav>
+
+
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br><br>
+      <h1 class="header center green-text">CUSTOMER SEGMENTATION</h1>
+      <div class="row center">
+        <strong>
+        <h5 class="header col s12 light">Predict the trust worthy customers
+        <br>
+        </h5></strong>
+      </div>
+
+              <div class="row">
+    <form action='/predict' method="post" class="col s12">
+      <div class="row">
+        <div class="input-field col s4">
+            <label for="first_name"><b>Customer id</b></label>
+            <br>
+          <input placeholder="Enter customer id" name="customer id" id="first_name" type="text" class="validate">
+        </div>
+        <div class="input-field col s4">
+
+          <label for="last_name"><b>ANNUAL INCOME</b></label>
+            <br>
+          <input id="last_name" name="Annual Income" placeholder="Enter annual income"  type="text" class="validate">
+
+        </div>
+
+        <div class="input-field col s4">
+            <label for="_name"><b>spending score(1-100)</b></label>
+            <br>
+          <input id="_name" name="Spending score" placeholder="Spending score" type="text" class="validate">
+
+        </div>
+
+      </div>
+
+      <div class="row center">
+
+          <button type="submit" class="btn-large waves-effect waves-light green">Predict Probability</button>
+      </div>
+    </form>
+      </div>
+
+      <br><center><strong>
+        {{pred}}<br></strong>
+      </center>
+    </div>
+  </div>
+
+
+    <br><br>
+  </div>
+  </div>
+
+  <footer class="page-footer light-blue">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Project Bio</h5>
+          <p class="grey-text text-lighten-4">Based on the analysis, WE have developed a model that allows to anticipate the purchases that will be made by a new customer, during the following year and this, from its first purchase. </p>
+            <br>
+            Made by Adhish Chitranshi  and Adarsh Gupta
+
+        </div>
+        
+    
+  </footer>
+
+  </body>
+</html>
